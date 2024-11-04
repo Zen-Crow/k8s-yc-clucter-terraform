@@ -39,8 +39,8 @@ resource "yandex_kubernetes_cluster" "k8s-zonal" {
       events_enabled             = true
       audit_enabled              = true
     }
-
   }
+
   service_account_id      = yandex_iam_service_account.myaccount.id
   node_service_account_id = yandex_iam_service_account.myaccount.id
 
@@ -56,7 +56,6 @@ resource "yandex_kubernetes_cluster" "k8s-zonal" {
   kms_provider {
     key_id = yandex_kms_symmetric_key.kms-key.id
   }
-
 }
 
 ### K8s Node group ###
